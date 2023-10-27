@@ -1,0 +1,275 @@
+@font-face {
+  font-family: "Netflix";
+  src: url("./assests/font/NetflixSans_ttf.ttf");
+}
+@font-face {
+  font-family: "Netflix Bold";
+  src: url("./assests/font/NetflixSans_Bold.ttf");
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Netflix", sans-serif;
+  color: white;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  width: 100%;
+  background-color: black;
+}
+img {
+  width: 100%;
+  display: inline-block;
+}
+a {
+  text-decoration: none;
+}
+button ion-icon {
+  font-size: 2.2rem;
+}
+#header {
+  width: 100%;
+  height: 8rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#nav {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: rem; */
+}
+.logo {
+  height: 100%;
+  width: 18.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-nav {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding-right: 3rem;
+}
+select {
+  padding: 5px 20px;
+  background-color: rgba(0, 0, 0, 0.452);
+  color: white;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.right-nav button,
+.home div button {
+  background-color: #e50914;
+  padding: 0.5rem 1rem;
+  color: white;
+  font-size: 1.6rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#main {
+  width: 100%;
+  height: 105vh;
+  background-image: url("./assests/netflix_background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 60px 300px 100px 200px #000000a9 inset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 8px solid #232323;
+}
+.home {
+  /* height: 400px;
+  width: 700px; */
+  margin-top: 12rem;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home h1 {
+  font-family: "Netflix Bold";
+  /* font-weight: 900; */
+  font-weight: bolder;
+  font-size: 5rem;
+  letter-spacing: -1.4px;
+}
+.home h4 {
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin: 2rem 0rem;
+}
+.home h5 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 1.8rem;
+}
+.home div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home div input {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid grey;
+  outline: none;
+  padding: 1.6rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1.6rem;
+  width: 36rem;
+  height: 5.6rem;
+}
+.home div button {
+  height: 5.6rem;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+section {
+  padding: 4rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 8px solid #232323;
+}
+section > div {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  /* overflow: hidden; */
+}
+section > div .right {
+  min-width: 50%;
+  max-width: 50%;
+}
+.left h1 {
+  font-size: 5rem;
+  font-family: "Netflix Bold";
+  font-weight: bolder;
+  margin-bottom: 1.4rem;
+}
+.left p {
+  font-size: 2.4rem;
+}
+section > div .right {
+  position: relative;
+  overflow: hidden;
+}
+.right img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50rem;
+  z-index: 10;
+}
+.qna-container{
+  max-width: 105rem;
+  margin: 4rem auto;
+}
+.qna-container h1{
+  margin: 2rem;
+  font-size: 4.6rem;
+  font-weight: 900;
+  font-family: "Netflix bold";
+}
+.qna{
+  width: 100%;
+  cursor: pointer;
+  margin: 1rem auto;
+}
+.qna-container .qna .question,.qna-container .qna .ans{
+  width: 100%;
+  padding: 2.4rem 2.4rem;
+  background-color: #2d2d2d;
+  font-size: 2.2rem;
+  margin: 0.2rem auto;
+  pointer-events: none;
+}
+.qna-container .qna .question ion-icon{
+  /* rotate: 45deg; */
+  font-size: 3rem;
+  transition: rotate 0.4s ease;
+}
+.qna-container .qna:hover>.question{
+  transition-timing-function: cubic-bezier(0.5, 0, 0.1, 1);
+  background-color: rgb(65,65,65);
+}
+.qna-container .qna .ans{
+  display: none;
+  transition: height 0.4s ease;
+  height: 0px;
+  overflow: hidden;
+}
+.qna-container .qna .question{
+  /* width: 100%; */
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.qna-container .active .question ion-icon{
+  rotate: 45deg;
+}
+.qna-container .active .ans{
+  transition: height 0.4s ease;
+  display: block;
+  height: max-content;
+}
+.home2{
+  margin-top: 0rem;
+}
+footer{
+  margin-top: 6rem;
+  border-top: 8px solid #232323;
+}
+footer .container{
+  padding: 6rem 0rem;
+  max-width: 105rem;
+  margin: 0rem auto;
+}
+footer .container * a{
+  text-decoration: underline;
+}
+footer .container *{
+  font-size: 1.54rem;
+  color: #b3b3b3;
+}
+.footer-menu{
+  margin: 1.8rem auto;
+  display: flex;
+  align-items: center;
+  /* gap: 12rem; */
+  justify-content: space-between;
+}
+.footer-menu .sub-menu{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+footer .container select{
+  margin: 1.8rem auto;
+}
